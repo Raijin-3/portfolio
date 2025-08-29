@@ -6,11 +6,10 @@ export default function Home() {
     <div className="grid grid-cols-1 gap-8 md:gap-10 lg:grid-cols-2 items-start">
       <section className="space-y-6">
         <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
-          Full‑Stack Developer
+        Full-Stack Developer | PHP (Laravel/CodeIgniter), Python (Django) | AI & LLM Integrations
         </h1>
         <p className="text-gray-700 dark:text-gray-300 max-w-prose">
-          6 years total experience: Sales & HR foundations, a COVID sabbatical, then a self‑taught
-          leap into code. I build accessible, performant, and elegant products.
+        I’m a senior full-stack developer with 3+ years of experience building production web apps in PHP (Laravel, CodeIgniter) and Python (Django), plus hands-on work with LLMs and data pipelines. At CUR8, I built an AI Pitch Analyzer in PHP/Python, developed a Laravel-based CRM, optimized MySQL performance, and shipped Moodle plugins. I enjoy turning messy data into reliable, user-friendly products.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link href="/projects" className="btn-primary px-5 py-2.5 rounded-md text-sm font-medium shadow">
