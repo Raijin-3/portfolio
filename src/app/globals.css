@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7fbf9; /* soft mint */
+  --foreground: #0b1b14; /* deep green-black */
+  --brand: #10b981; /* emerald-500 */
+  --brand-600: #059669; /* emerald-600 */
+  --brand-700: #047857; /* emerald-700 */
+  --surface: #ffffff;
+  --border: #d1fae5; /* emerald-100 */
 }
 
 @theme inline {
@@ -14,8 +19,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #07140f; /* dark mint night */
+    --foreground: #e6f7ef; /* pale mint */
+    --surface: #0b1f18;
+    --border: #064e3b;
   }
 }
 
@@ -23,4 +30,82 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utility: primary button */
+.btn-primary {
+  background-image: linear-gradient(90deg, var(--brand-600), var(--brand));
+  color: white;
+  transition: filter .2s ease, transform .15s ease;
+}
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-primary:active { transform: translateY(1px); }
+
+/* Utility: outline button */
+.btn-outline {
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  background: var(--surface);
+}
+.btn-outline:hover { background: rgba(16,185,129,.06); }
+
+/* Utility: badge */
+.badge {
+  background: rgba(16,185,129,.08);
+  color: var(--brand-700);
+  border: 1px solid var(--border);
+}
+
+/* Section title underline */
+.section-title {
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 88px;
+  height: 4px;
+  border-radius: 9999px;
+  background-image: linear-gradient(90deg, var(--brand-700), var(--brand));
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+.glitch::before { color: #00e5ff; transform: translate(2px, -1px); mix-blend-mode: screen; animation: glitchShift 2.2s infinite ease-in-out; }
+.glitch::after { color: #ff00aa; transform: translate(-2px, 1px); mix-blend-mode: screen; animation: glitchShift 1.6s infinite ease-in-out reverse; }
+
+@keyframes glitchShift {
+  0% { clip-path: inset(0 0 80% 0); }
+  10% { clip-path: inset(10% 0 60% 0); }
+  20% { clip-path: inset(30% 0 40% 0); }
+  30% { clip-path: inset(50% 0 20% 0); }
+  40% { clip-path: inset(70% 0 10% 0); }
+  50% { clip-path: inset(40% 0 30% 0); }
+  60% { clip-path: inset(20% 0 50% 0); }
+  70% { clip-path: inset(10% 0 60% 0); }
+  80% { clip-path: inset(0 0 80% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+/* Card hover float */
+.float-card {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.float-card:hover {
+  transform: translateY(-4px) rotateX(2deg) rotateY(-2deg);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
