@@ -1,8 +1,8 @@
 export default function ResumePage() {
   return (
-    <section className="space-y-8">
+    <section className="space-y-6">
       <header>
-        <h1 className="text-3xl font-bold tracking-tight section-title pb-3 mb-2">Resume</h1>
+        <h1 className="text-3xl font-bold tracking-tight mb-6 section-title">Resume</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">Meghanad Kheti · Senior Full Stack Developer</p>
       </header>
 
