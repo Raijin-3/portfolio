@@ -6,7 +6,7 @@ export default function Home() {
     <div className="grid grid-cols-1 gap-8 md:gap-10 lg:grid-cols-2 items-start">
       <section className="space-y-6">
         <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
-          UI/UX & Full‑Stack
+          Full‑Stack Developer
         </h1>
         <p className="text-gray-700 dark:text-gray-300 max-w-prose">
           6 years total experience: Sales & HR foundations, a COVID sabbatical, then a self‑taught
