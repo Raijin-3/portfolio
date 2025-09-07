@@ -56,7 +56,7 @@ export default function WordByWordReveal({
         observer.unobserve(currentElement);
       }
     };
-  }, [words.length, wordDelay, delay, threshold, hasStarted]);
+  }, [words, words.length, wordDelay, delay, threshold, hasStarted]);
 
   return (
     <div ref={elementRef} className={`word-reveal ${className}`}>

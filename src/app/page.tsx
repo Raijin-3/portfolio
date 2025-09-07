@@ -21,7 +21,7 @@ export default function Home() {
         {/* Animated Main Title */}
         <div className="space-y-4">
           <FadeInText delay={100} className="text-lg font-medium text-[var(--brand)] text-shimmer">
-            👋 Hello, I'm Meghanad Kheti
+            👋 Hello, I&apos;m Meghanad Kheti
           </FadeInText>
           
           <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-white">
@@ -45,7 +45,7 @@ export default function Home() {
         {/* Animated Description */}
         <FadeInText delay={800} direction="up" duration={1000}>
           <WordByWordReveal 
-            text="I'm a senior full-stack developer with 3+ years of experience building production web apps in PHP (Laravel, CodeIgniter) and Python (Django), plus hands-on work with LLMs and data pipelines. At CUR8, I built an AI Pitch Analyzer in PHP/Python, developed a Laravel-based CRM, optimized MySQL performance, and shipped Moodle plugins."
+            text="I&apos;m a senior full-stack developer with 3+ years of experience building production web apps in PHP (Laravel, CodeIgniter) and Python (Django), plus hands-on work with LLMs and data pipelines. At CUR8, I built an AI Pitch Analyzer in PHP/Python, developed a Laravel-based CRM, optimized MySQL performance, and shipped Moodle plugins."
             className="text-gray-300 max-w-prose leading-relaxed"
             delay={2800}
             wordDelay={150}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Nav from "@/components/Nav";
 import BackgroundParticles from "@/components/BackgroundParticles";
 import { Geist, Geist_Mono } from "next/font/google";

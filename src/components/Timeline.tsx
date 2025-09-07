@@ -99,12 +99,13 @@ export default function Timeline() {
       }
     );
 
-    itemRefs.current.forEach((ref) => {
+    const currentRefs = itemRefs.current;
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      itemRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
@@ -140,7 +141,7 @@ export default function Timeline() {
         {timelineData.map((item, index) => (
           <div
             key={item.id}
-            ref={(el) => itemRefs.current[index] = el}
+            ref={(el) => { itemRefs.current[index] = el; }}
             data-id={item.id}
             className={`
               relative pl-20 transition-all duration-700 transform

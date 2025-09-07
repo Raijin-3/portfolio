@@ -19,7 +19,8 @@ export default function AnimatedTitle({
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  // Use a browser-safe timeout type and initialize with null
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const currentTitle = titles[currentTitleIndex];

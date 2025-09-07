@@ -46,7 +46,10 @@ export default function SkillsPage() {
               <div className="skill-meter" aria-label={`${s.name} proficiency`}>
                 <div
                   className="skill-meter-fill"
-                  style={{ ['--pct' as any]: `${s.level}%`, ['--delay' as any]: `${200 + idx * 120}ms` }}
+                  style={{ 
+                    ['--pct' as keyof React.CSSProperties]: `${s.level}%`, 
+                    ['--delay' as keyof React.CSSProperties]: `${200 + idx * 120}ms` 
+                  } as React.CSSProperties}
                 />
               </div>
             </div>

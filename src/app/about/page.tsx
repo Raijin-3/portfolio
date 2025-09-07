@@ -1,4 +1,3 @@
-import AnimatedTitle from "@/components/AnimatedTitle";
 import TypewriterText from "@/components/TypewriterText";
 import FadeInText from "@/components/FadeInText";
 import WordByWordReveal from "@/components/WordByWordReveal";
@@ -38,7 +37,7 @@ export default function AboutPage() {
             <FadeInText delay={600} direction="up">
               <div className="p-6 rounded-xl bg-gradient-to-br from-[var(--brand)]/5 to-[var(--brand-600)]/10 border border-[var(--brand)]/20 space-y-4">
                 <WordByWordReveal
-                  text="I'm Meghanad Kheti, a Senior Full Stack Developer with strong experience in Core PHP and frameworks like CodeIgniter 4 and Laravel, plus Python/Django. I build APIs, architect databases, and collaborate closely with teams and clients."
+                  text="I&apos;m Meghanad Kheti, a Senior Full Stack Developer with strong experience in Core PHP and frameworks like CodeIgniter 4 and Laravel, plus Python/Django. I build APIs, architect databases, and collaborate closely with teams and clients."
                   className="text-gray-300 leading-relaxed text-lg"
                   delay={1200}
                   wordDelay={120}
