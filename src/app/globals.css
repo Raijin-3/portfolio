@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #0a0a0a; /* deep black */
@@ -8,13 +10,6 @@
   --brand-700: #990000; /* darkest red */
   --surface: #1a1a1a; /* dark surface */
   --border: #333333; /* dark border */
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: light) {
