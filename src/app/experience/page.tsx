@@ -60,9 +60,9 @@ export default function ExperiencePage() {
         {timeline.map((item) => (
           <li key={item.period} className="ms-4 sm:ms-6 mb-8">
             <span className="absolute -start-3.5 rounded-full bg-[var(--brand)] h-3 w-3 mt-2" />
-            <time className="text-xs text-gray-500">{item.period}</time>
+            <time className="text-xs text-gray-400">{item.period}</time>
             <h2 className="font-semibold">{item.title}</h2>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">{item.details}</p>
+            <p className="text-gray-300 text-sm">{item.details}</p>
           </li>
         ))}
       </ol>
